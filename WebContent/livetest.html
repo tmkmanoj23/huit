@@ -1,0 +1,137 @@
+<html>
+<head>
+  <title>Test Login</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="assets/js/livetest.js" type="text/javascript"></script>
+  <link rel="stylesheet" type="text/css" href="css/test.css">
+  <!-- Bootstrap core CSS     -->
+    <link href="assets1/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Animation library for notifications   -->
+    <link href="assets1/css/animate.min.css" rel="stylesheet"/>
+
+    <!--  Light Bootstrap Table core CSS    -->
+    <link href="assets1/css/light-bootstrap-dashboard.css" rel="stylesheet"/>
+
+
+    <!--  CSS for Demo Purpose, don't include it in your project     -->
+    <link href="assets1/css/demo.css" rel="stylesheet" />
+
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="assets/css/modal1.css">
+    <style>
+    .instruction{
+    border: 1px solid #dcdbdb;
+    padding: 26px;
+    }
+    h3{
+    text-align: center;
+    font-weight: bold;
+    font-family: Calibri;
+    font-size: 35px;
+    color: #33134F;
+    }
+    h4{
+
+    color: #0F9183;
+    /* font-weight: bold; */
+    font-family: Arial;
+    }
+    .instructionbox{
+      box-shadow: 10px 10px 5px grey;
+    }
+    </style>
+
+</head>
+<body style="background-color:rgb(223, 226, 226);padding: 40px;">
+<div id="myModal1" class="modal1">
+
+  <!-- Modal content -->
+  <div class="modal1-content">
+    <div class="modal1-header">
+      <span class="close1">&times;</span>
+       
+    </div>
+    <div class="modal1-body">
+   	<img style="margin-left: 250px" src="img/alert.png">
+      <p style="text-align: center" id="modalData">Please complete the form!</p>
+    </div>
+    <div class="modal-footer">
+      <a  style="float:right"><button id="okBtn"class="btn btn-theme" type="button" >OK</button></a>
+    </div>
+  </div>
+
+</div>
+<!-- <div class="col-md-2"></div> -->
+  <div class="col-md-8">
+    <div class="card instructionbox" style="padding:10px">
+      <h3><i class="fa fa-list-ul" aria-hidden="true"></i>&nbsp;&nbsp;&nbsp;Instructions</h3>
+      <div class="instruction">
+
+        <h4><i class="fa fa-pencil" aria-hidden="true"></i>&nbsp;Before beginning the Exam:</h4>
+        <ul>
+         <li>The test would contain the following three sections namely&mdash; Verbal, Quantitative Aptitude and Logical Reasoning. Each section would be allotted a separate timer and the time saved from one section would not be added to the next section.</li>
+        <li>The  questions would be multiple choice questions with four options and one correct answer.</li>
+        <li>You cannot toggle between the sections and will only go to the next section when the timer of the particular section ends or when you submit the test for the following section.</li>
+        <li>Make sure you have a good internet connection.</li>
+        <li>If you are taking the exam late in the day, it is recommended that you reboot your computer before beginning, to free up memory resource from other programs on your computer.
+        <li>Shut down all instant messaging tools (Skype, MSN, Yahoo,etc) and Email programs as they can conflict with  the exam.</li>
+        <li>Maximize the browser while taking the test.</li>
+        <li>When you begin the exam enter the passkey provided by the Admin and enter other required details and click on BEGIN TEST to start the test.</li>
+      </ul><hr>
+      <h4><i class="fa fa-pencil" aria-hidden="true"></i>&nbsp;During the exam:</h4>
+      <ul> 
+      <li>The main window of the Live Test consist of a side navigation bar which has tabs as the number of questions. The test would automatically scroll down to the question when the tab for that question is clicked.</li>
+      <li>The question palette displayed on the left side of the test screen will show the status of each question as follows: </li><br>
+      <div class='legend-scale' style="border:1px solid grey">
+        <ul class='legend-labels'>
+          <li>Attempted- Marked with <span style="color:#43b743; font-weight:bold">Green</span></li>
+          <li>Not Attempted-Marked with <span style="color:#42b1f3; font-weight:bold">Blue</span></li>
+          <li>Marked for review-Marked with <span style="color:yellow; font-weight:bold">Yellow</span></li>
+          <li>Answered but not sure-Marked with <span style="color:red; font-weight:bold">Red</span></li>
+        </ul>
+      </div><br>
+      <li>You can navigate to the particular category of questions whether Attempted(Green), Not Attempted(Blue), Marked for Review(Yellow)by clicking on the coloured tab in the navigation bar. The tabs would show the questions correspondingly. Click on the Red tab in the Navigation bar to view all the Questions.</li>  
+      <li>Do not resize (minimize) the browser during the test.</li>
+      <li style="color:red">Clicking the &#8216;back&#8217; button on the browser will automatically submit your answers and take you out of the test window.</li>
+      <li>Click the &#8216;submit&#8217; button to submit your test of that particular section. Do not press &#8216;Enter&#8217; on the keyboard to submit the exam.</li>
+      <li>Click the submit button on the top right corner to &#8216;submit&#8217; the test for the current section. This will navigate you to the next section automatically.</li>
+      <li>The test ends when you submit the last section.</li>
+      <ul>
+      <hr>
+    </div>
+      <h3>Best of Luck!!<i class="fa fa-thumbs-up" aria-hidden="true"></i><h3>
+
+    </div>
+  </div>
+
+<!-- <div class="col-md-2"></div>
+<div class="col-md-4"></div> -->
+
+  <div class="col-md-4" style="position:fixed;    margin-left: 63%;%">
+<div class="panel panel-info">
+  <div class="panel-heading" style="background-color: #0F9183;">
+    <h3 class="panel-title" style="color:white; font-family:Calibri">Enter the credentials</h3>
+  </div>
+  <div class="panel-body">
+  <fieldset>
+    <form class="form-horizontal">
+    <div class="form-group">
+      <label for="inputEmail" class="col-lg-2 control-label">Phone:</label>
+      <div class="col-lg-10">
+        <input type="text" class="form-control" id="phone" placeholder="Phone No">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputPassword" class="col-lg-2 control-label">Pass Key:</label>
+      <div class="col-lg-10">
+        <input type="text" class="form-control" id="passkey" placeholder="Pass Key">
+      </div>
+    </div>
+    <a id="liveTestSubmit" class="btn btn-primary btn-sm btn-fill" style="float:right">Begin Test</a>
+    
+  </fieldset>
+  </div>
+</form>
+</div>
+</body>

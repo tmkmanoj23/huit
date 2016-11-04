@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="Dashboard">
+<meta name="keyword"
+	content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+<meta name="google-signin-client_id"
+	content="788352314958-m981jr72m647bm8qr36pckpnv3o7rp5a.apps.googleusercontent.com">
+<title>HUIT</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="https://apis.google.com/js/platform.js?onload=renderButton"
+	async defer></script>
+<script src="https://apis.google.com/js/api.js"></script>
+<script id="facebook-jssdk"
+	src="https://connect.facebook.net/en_US/sdk.js"></script>
+<script src="https://apis.google.com/js/platform.js?onload=onLoad" async
+	defer></script>
+<script src="assets/js/profile.js" type="text/javascript"></script>
+<!-- Bootstrap core CSS -->
+<link href="assets/css/bootstrap.css" rel="stylesheet">
+<!--external css-->
+<link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+
+<!-- Custom styles for this template -->
+<link href="assets/css/style.css" rel="stylesheet">
+<link href="assets/css/style-responsive.css" rel="stylesheet">
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script type="text/javascript" src="https://mail.google.com/mail/u/0/?logout&hl=en" />
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <script src="http://connect.facebook.net/en_US/all.js"></script>
+      <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+	<section id="container">
+		<!-- **********************************************************************************************************************************************************
+      TOP BAR CONTENT & NOTIFICATIONS
+      *********************************************************************************************************************************************************** -->
+		<!--header start-->
+		<header class="header black-bg">
+			<div class="sidebar-toggle-box">
+				<div class="fa fa-bars tooltips" data-placement="right"
+					data-original-title="Toggle Navigation"></div>
+			</div>
+			<!--logo start-->
+			<a class="logo"><b>HUIT</b></a>
+			<!--logo end-->
+			<div class="nav notify-row" id="top_menu">
+				<!--  notification start -->
+				<ul class="nav top-menu">
+					<!-- inbox dropdown start-->
+					<li id="header_inbox_bar" class="dropdown"><a
+						data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
+							<i class="fa fa-envelope-o"></i> <span class="badge bg-theme">5</span>
+					</a>
+						<ul class="dropdown-menu extended inbox">
+							<div class="notify-arrow notify-arrow-green"></div>
+							<li>
+								<p class="green">You have 5 new messages</p>
+							</li>
+							<li><a href="index.html#"> <span class="photo"><img
+										alt="avatar" src="assets/img/ui-zac.jpg"></span> <span
+									class="subject"> <span class="from">Zac Snider</span> <span
+										class="time">Just now</span>
+								</span> <span class="message"> Hi mate, how is everything? </span>
+							</a></li>
+							<li><a href="index.html#"> <span class="photo"><img
+										alt="avatar" src="assets/img/ui-divya.jpg"></span> <span
+									class="subject"> <span class="from">Divya Manian</span>
+										<span class="time">40 mins.</span>
+								</span> <span class="message"> Hi, I need your help with this. </span>
+							</a></li>
+							<li><a href="index.html#"> <span class="photo"><img
+										alt="avatar" src="assets/img/ui-danro.jpg"></span> <span
+									class="subject"> <span class="from">Dan Rogers</span> <span
+										class="time">2 hrs.</span>
+								</span> <span class="message"> Love your new Dashboard. </span>
+							</a></li>
+							<li><a href="index.html#"> <span class="photo"><img
+										alt="avatar" src="assets/img/ui-sherman.jpg"></span> <span
+									class="subject"> <span class="from">Dj Sherman</span> <span
+										class="time">4 hrs.</span>
+								</span> <span class="message"> Please, answer asap. </span>
+							</a></li>
+							<li>
+								<!--<a href="index.html#">See all messages</a>-->
+							</li>
+						</ul></li>
+					<!-- inbox dropdown end -->
+				</ul>
+				<!--  notification end -->
+			</div>
+			<div class="top-menu">
+				<ul class="nav pull-right top-menu">
+					<li><button id="logoutbtn" onClick="signOut(); return false;"
+							class="btn btn-theme btn-block" type="submit">
+							<i class="fa fa-lock"></i> Logout
+						</button></li>
+
+				</ul>
+			</div>
+		</header>
+		<!--header end-->
+
+		<!-- **********************************************************************************************************************************************************
+      MAIN SIDEBAR MENU
+      *********************************************************************************************************************************************************** -->
+		<!--sidebar start-->
+		<aside>
+			<div id="sidebar" class="nav-collapse ">
+				<!-- sidebar menu start-->
+				<ul class="sidebar-menu" id="nav-accordion">
+
+					<p class="centered">
+						<img src="assets/img/user.png" class="img-circle" width="60"></a>
+					</p>
+					<h5 class="centered">User</h5>
+
+					<li class="mt"><a class="active" href="profile.html"> <i
+							class="fa fa-dashboard"></i> <span>Profile</span>
+					</a></li>
+
+					<li class="sub-menu"><a href="javascript:;"> <i
+							class="fa fa-book"></i> <span>Test Section</span>
+					</a>
+						<ul class="sub">
+							<li><a href="demotest.html">Demo Test</a></li>
+							<li><a href="livetest.html">Live Test</a></li>
+							<li><a href="viewscore.html">View Score</a></li>
+						</ul></li>
+					<hr>
+					<li class="mt"><a href="aboutus.html"> <i
+							class="fa fa-dashboard"></i> <span>About us</span>
+					</a></li>
+					<li class="mt"><a href="contactus.html"> <i
+							class="fa fa-dashboard"></i> <span>Contact Us</span>
+					</a></li>
+					<li class="mt"><a href="feedback.html"> <i
+							class="fa fa-dashboard"></i> <span>Feedback</span>
+					</a></li>
+
+
+
+					<!-- sidebar menu end-->
+			</div>
+		</aside>
+		<!--sidebar end-->
+
+		<!-- **********************************************************************************************************************************************************
+      MAIN CONTENT
+      *********************************************************************************************************************************************************** -->
+		<!--main content start-->
+
+		<section id="main-content">
+			<section class="wrapper">
+				<h3>
+					<i class="fa fa-angle-right"></i>Your details:
+				</h3>
+				<!--Form-->
+				<div class="row mt">
+					<div class="col-lg-12">
+						<div class="form-panel">
+							<form class="form-horizontal style-form" method="get">
+								<br> <span
+									style="color: black; font-size: 20px; font-weight: bold; padding-top: 25px">Personal
+									Details</span>
+								<hr>
+								<br>
+								<div class="form-group">
+									<label class="col-sm-2 col-sm-2 control-label">Your
+										Name:</label>
+									<div class="col-sm-10">
+										<input id="name" type="text" class="form-control"
+											placeholder="Full Name">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-2 col-sm-2 control-label">Your
+										Address:</label>
+									<div class="col-sm-10">
+										<input id="address" type="text" class="form-control"
+											placeholder="Full Address">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-2 col-sm-2 control-label">Your
+										Email ID:</label>
+									<div class="col-sm-10">
+										<input type="email" id="email" class="form-control"
+											placeholder="your-email@example.com">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-2 col-sm-2 control-label">Your
+										Gender:</label> <label class="checkbox-inline"> <input
+										type="radio" id="female" value="option1"
+										onclick="gendercheck()" name="a"> Female
+									</label> <label class="checkbox-inline"> <input type="radio"
+										id="male" value="option2" onclick="gendercheck()" name="a">
+										Male
+									</label>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-2 col-sm-2 control-label">Date of
+										Birth:</label>
+									<div class="col-sm-10">
+										<input id="dob" type="date" class="form-control"
+											placeholder="DOB">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-2 col-sm-2 control-label">Your
+										Contact No.:</label>
+									<div class="col-sm-10">
+										<input type="text" disabled id="phone" class="form-control"
+											placeholder="Ten digits only">
+									</div>
+								</div>
+								<button id="updategen" type="button" class="btn btn-primary"">Edit</button>
+							</form>
+						</div>
+						<!--form pane,-->
+					</div>
+					<!-- col-lg-12-->
+				</div>
+				<!-- /row -->
+
+				<!-- INLINE FORM ELELEMNTS, UG DETAILS-->
+				<div class="row mt">
+					<div class="col-lg-12">
+						<div class="form-panel">
+							<span
+								style="color: black; font-size: 20px; font-weight: bold; padding-top: 25px">Graduation
+								Details</span>
+							<hr>
+							<br>
+							<div class="form-group">
+								<label class="col-sm-2 col-sm-2 control-label">Name of
+									College:</label>
+								<div class="col-sm-10">
+									<input id="collegename" type="text" class="form-control"
+										placeholder="College Name">
+								</div>
+							</div>
+							<br>
+							<br>
+							<br>
+							<form class="form-inline" role="form">
+								<label class="col-sm-2 col-sm-2 control-label">Course:</label> <select
+									id="specialization" class="form-control">
+									<option>B.Tech</option>
+									<option>BCA</option>
+								</select><br>
+								<br> <label class="col-sm-2 col-sm-2 control-label">Specialization:</label>
+								<select id="specialization" class="form-control">
+									<option>ECE</option>
+									<option>CS</option>
+									<option>MECH</option>
+								</select><br>
+								<br>
+							</form>
+							<form class="form-inline" role="form">
+								<label class="col-sm-2 col-sm-2 control-label">Year of
+									passing UG:</label> <input type="text" class="form-control" id="yearUG" /><br>
+								<br> <label class="col-sm-2 col-sm-2 control-label">Percentage
+									in UG:</label> <input type="text" class="form-control"
+									id="percentageUG" placeholder="00" /><br>
+								<br>
+								<button id="updateUG" type="button" class="btn btn-primary">Update</button>
+							</form>
+						</div>
+						<!-- /form-panel -->
+					</div>
+					<!-- /col-lg-12 -->
+				</div>
+				<!-- /row -->
+				<!-- INLINE FORM ELELEMNTS, 12TH DETAILS -->
+				<div class="row mt">
+					<div class="col-lg-12">
+						<div class="form-panel">
+							<span
+								style="color: black; font-size: 20px; font-weight: bold; padding-top: 25px">12th
+								Details</span>
+							<hr>
+							<br>
+							<form class="form-inline" role="form">
+								<label class="col-sm-2 col-sm-2 control-label">Board:</label> <select
+									id="board12" class="form-control">
+									<option>ISC</option>
+									<option>CBSE</option>
+									<option>Others</option>
+								</select><br>
+								<br>
+							</form>
+							<form class="form-inline" role="form">
+								<label class="col-sm-2 col-sm-2 control-label">Year of
+									passing 12th:</label> <input type="text" class="form-control"
+									id="year12"><br>
+								<br> <label class="col-sm-2 col-sm-2 control-label">Percentage
+									in 12th:</label> <input type="text" class="form-control"
+									id="percentage12" placeholder="00"><br>
+								<br>
+								<button id="update12" type="button" class="btn btn-primary">Update</button>
+							</form>
+						</div>
+						<!-- /form-panel -->
+					</div>
+					<!-- /col-lg-12 -->
+				</div>
+				<!-- /row -->
+				<!-- INLINE FORM ELELEMNTS, 10TH DETAILS -->
+				<div class="row mt">
+					<div class="col-lg-12">
+						<div class="form-panel">
+							<span
+								style="color: black; font-size: 20px; font-weight: bold; padding-top: 25px">10th
+								Details</span>
+							<hr>
+							<br>
+							<form class="form-inline" role="form">
+								<label class="col-sm-2 col-sm-2 control-label">Board:</label> <select
+									id="board10" class="form-control">
+									<option>ISC</option>
+									<option>CBSE</option>
+								</select><br>
+								<br>
+							</form>
+							<form class="form-inline" role="form">
+								<label class="col-sm-2 col-sm-2 control-label">Year of
+									passing 10th:</label> <input type="text" class="form-control"
+									id="year10"><br>
+								<br> <label class="col-sm-2 col-sm-2 control-label">Percentage
+									in 10th:</label> <input type="text" class="form-control"
+									id="percentage10" placeholder="00"><br>
+								<br>
+								<button id="update10" type="button" class="btn btn-primary">Update</button>
+							</form>
+						</div>
+						<!-- /form-panel -->
+					</div>
+					<!-- /col-lg-12 -->
+				</div>
+				<!-- /row -->
+
+			</section>
+			<! --/wrapper -->
+		</section>
+		<!-- /MAIN CONTENT -->
+
+		<!--main content end-->
+		<!--footer start-->
+		<footer class="site-footer">
+			</div>
+		</footer>
+		<!--footer end-->
+	</section>
+	<!-- js placed at the end of the document so the pages load faster -->
+	<script src="assets/js/jquery.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/jquery-ui-1.9.2.custom.min.js"></script>
+	<script src="assets/js/jquery.ui.touch-punch.min.js"></script>
+	<script class="include" type="text/javascript"
+		src="assets/js/jquery.dcjqaccordion.2.7.js"></script>
+	<script src="assets/js/jquery.scrollTo.min.js"></script>
+	<script src="assets/js/jquery.nicescroll.js" type="text/javascript"></script>
+
+
+	<!--common script for all pages-->
+	<script src="assets/js/common-scripts.js"></script>
+
+	<!--script for this page-->
+
+	<script>
+      //custom select box
+
+      $(function(){
+          $('select.styled').customSelect();
+      });
+
+       function gendercheck{
+  var f=document.getElementById('female').value;  
+  var m=document.getElementById('male').value;
+  if(m==true)
+    document.getElementById('female').value=false; 
+  else if(f==true)
+    document.getElementById('male').value=false;
+  else
+    continue; 
+}
+
+  </script>
+	<script>
+    
+  </script>
+
+
+</body>
+</html>

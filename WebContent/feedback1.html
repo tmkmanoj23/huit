@@ -1,0 +1,325 @@
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="assets1/img/favicon.ico">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="google-signin-client_id"content="788352314958-m981jr72m647bm8qr36pckpnv3o7rp5a.apps.googleusercontent.com">
+
+    <title>HUIT</title>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+
+
+    <!-- Bootstrap core CSS     -->
+    <link href="assets1/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Animation library for notifications   -->
+    <link href="assets1/css/animate.min.css" rel="stylesheet"/>
+
+    <!--  Light Bootstrap Table core CSS    -->
+    <link href="assets1/css/light-bootstrap-dashboard.css" rel="stylesheet"/>
+
+
+    <!--  CSS for Demo Purpose, don't include it in your project     -->
+    <link href="assets1/css/demo.css" rel="stylesheet" />
+
+
+    <!--     Fonts and icons     -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+    <link href="assets1/css/pe-icon-7-stroke.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="assets/css/modal1.css">
+</head>
+<body>
+<div id="myModal1" class="modal1">
+
+  <!-- Modal content -->
+  <div class="modal1-content">
+    <div class="modal1-header">
+      <span class="close1">&times;</span>
+       
+    </div>
+    <div class="modal1-body">
+   	<img style="margin-left: 250px" src="img/ok.png">
+      <p style="text-align: center" id="modalData">Please complete the form!</p>
+    </div>
+    <div class="modal-footer">
+      <a  style="float:right"><button id="okBtn"class="btn btn-theme" type="button" >OK</button></a>
+    </div>
+  </div>
+
+</div>
+<div class="wrapper">
+    <div class="sidebar" data-color="dark-purple" data-image="assets1/img/sidebar-2.jpg">
+
+    <!--
+
+        Tip 1: you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple"
+        Tip 2: you can also add an image using data-image tag
+
+    -->
+
+    	<div class="sidebar-wrapper">
+            <div class="logo">
+                
+                   <div ><img style="margin-left: 80px" src="	img/user.png"></div>
+            
+                <b ><h4 style="text-align: center;margin-top: 2px;margin-bottom: 2px;">Hello!</h4>  </b>
+                <a  ><h5 id="username"style="margin-top: 0px; text-align: center;margin-bottom: 2px;">User</h5></a>
+                
+            </div>
+
+            <ul class="nav">
+                <li>
+                    <a href="profile1.html">
+                        <i class="fa fa-calendar"></i>
+                        <p>Profile</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="demotest1.html">
+                        <i class="fa fa-file-text-o"></i>
+                        <p>Mock Test</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="livetest1.html">
+                        <i class="pe-7s-note2"></i>
+                        <p>Live Test</p>
+                    </a>
+                </li>
+                <hr>
+                <li>
+                    <a href="aboutus1.html">
+                        <i class="fa fa-info"></i>
+                        <p>About US</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="contactus1.html">
+                        <i class="fa fa-mobile"></i>
+                        <p>Contact US</p>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="feedback1.html">
+                        <i class="fa fa-comment"></i>
+                        <p>Feedback</p>
+                    </a>
+                </li>
+                
+				
+            </ul>
+    	</div>
+    </div>
+
+    <div class="main-panel">
+        <nav class="navbar navbar-default navbar-fixed" style="background-color:#33134F">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" style="color:#fff">Feedback</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    
+
+                    <ul class="nav navbar-nav navbar-right">
+                        
+                        <li>
+                             <button id="logoutbtn" onClick="signOut(); return false;" class="btn btn-theme btn-block btn-fill" type="submit">
+<i class="fa fa-lock"></i> Logout
+</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+<!--***********************************MAIN CONTENT END*****************************************8-->
+<!--***********************************MAIN CONTENT*****************************************8-->
+<div class="content">
+            <div class="container-fluid">
+                <div class="card">
+                    <h3 style="text-align:center; padding:10px;background-color:#0F9183;color:white;"><i class="fa fa-comments-o" aria-hidden="true"></i>&nbsp&nbsp&nbspYour feedback helps us grow</h3>
+                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group" style="padding:20px">
+                                                <span style="font-size:15px">Care to share what&#8217;s on your mind about us. Send us a feedback and help us improve. 
+                                                Also looking forward to your appreciation.<br><br>
+                                                </span>
+                                                <textarea id="feedback" rows="5" class="form-control">
+                                                </textarea>
+                                            </div>
+                                            <div id="thankyou1" style="text-align:center; display: none"><i class="fa fa-smile-o" aria-hidden="true"></i>Please enter some feedback and then submit..<br><br></div>
+                                            <button type="submit" class="btn btn-info btn-fill" onclick="thankyou();" style="margin-bottom:10px; margin-left:45%">Submit</button>
+                                        </div>
+                                    </div>
+                </div>
+            </div>
+</div>
+
+
+
+<!--***********************************MAIN CONTENT END*****************************************8-->
+<!--   Core JS Files   -->
+    <script src="assets1/js/jquery-1.10.2.js" type="text/javascript"></script>
+    <script src="assets1/js/bootstrap.min.js" type="text/javascript"></script>
+
+    <!--  Checkbox, Radio & Switch Plugins -->
+    <script src="assets1/js/bootstrap-checkbox-radio-switch.js"></script>
+
+    <!--  Charts Plugin -->
+    <script src="assets1/js/chartist.min.js"></script>
+
+    <!--  Notifications Plugin    -->
+    <script src="assets1/js/bootstrap-notify.js"></script>
+
+    <!--  Google Maps Plugin    -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+
+    <!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
+    <script src="assets1/js/light-bootstrap-dashboard.js"></script>
+
+    <!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
+    <script src="assets1/js/demo.js"></script>
+        <script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer></script>
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script>
+	$("#okBtn").click(function(e){
+		var modal = document.getElementById('myModal1');
+		modal.style.display = "none";
+	});
+    function checkph(){
+    	var phone=localStorage.getItem("ph");
+    	if(phone==null){
+    	window.location.replace("/HUIT/homepage.html");
+    }}
+	function signOut() {
+		if(localStorage.getItem("loginType")=="facebook"){
+		FB.login(function(response) {
+			if (response.status === 'connected') {
+				console.log("5");
+				
+				FB.logout(function(response) {
+					window.location.href="login.html";
+					console.log("logout1");
+				});
+
+			}
+		});
+		localStorage.clear();
+		}
+		else if(localStorage.getItem("loginType")=="google"){
+			      var auth2 = gapi.auth2.getAuthInstance();
+			      auth2.signOut().then(function () {
+			        console.log('User signed out.');
+			      });
+			      localStorage.clear();
+	      window.location.replace("/HUIT/login.html");
+		}
+		else{
+			localStorage.clear();
+			window.location.replace("/HUIT/login.html");
+		}
+		
+	    
+	}
+
+	    function onLoad() {
+	      gapi.load('auth2', function(){
+	        gapi.auth2.init();
+	      });
+	    }
+	    
+	    
+	    window.fbAsyncInit = function() {
+	    	FB.init({
+	    		appId : '1144102812338857',
+	    		cookie : true, // enable cookies to allow the server to access
+	    		// the session
+	    		xfbml : true, // parse social plugins on this page
+	    		version : 'v2.5' // use graph api version 2.5
+	    	});
+
+	    };
+
+
+	    (function(d, s, id) {
+	    	var js, fjs = d.getElementsByTagName(s)[0];
+	    	if (d.getElementById(id))
+	    		return;
+	    	js = d.createElement(s);
+	    	js.id = id;
+	    	js.src = "//connect.facebook.net/en_US/sdk.js";
+	    	fjs.parentNode.insertBefore(js, fjs);
+	    }(document, 'script', 'facebook-jssdk'));
+
+	    function statusChangeCallback(response) {
+	    	console.log('1');
+	    	console.log('statusChangeCallback');
+	    	console.log(response);
+	    	if (response.status === 'connected') {
+	    		console.log("connected");
+	    	}
+	    }
+	    
+    function thankyou(){
+    	
+    	var feedback= document.getElementById("feedback").value;
+    	var feed=feedback.trim();
+    	if(feed!=null && feed!= undefined && feed!=""){
+    	var jsona = {
+    		    "feedbackDto" : 
+    	        {
+    	        	
+    	            "feedback":feed,
+    	            "phone":localStorage.getItem("ph")
+    	        }
+    	};
+    		console.log(jsona);
+    		$.ajax({
+    			"url" : "/HUIT/feedback/createFeedback",
+    			"method" : "POST",
+    			"contentType" : "application/json",
+    			"data" : JSON.stringify(jsona),
+    			"processData" : false,
+    			"dataType" : "text",
+
+    			success : function(data) {
+    				console.log(data);
+    				if (data == "feedback updated") {
+    					var modal = document.getElementById('myModal1');
+						var span = document.getElementsByClassName("close1")[0];
+						modal.style.display = "block";
+						$("#modalData").text("Thankyou for your feedback!");
+						span.onclick = function() {
+						    modal.style.display = "none";}
+						document.getElementById('thankyou1').style.display='none';
+						 document.getElementById("feedback").value="";
+
+    				} else {
+    					alert("Network error");
+    				}
+
+    			},
+    			error : function(d) {
+    				console.log(d)
+    			}
+    		});}
+    	else{
+    		document.getElementById('thankyou1').style.display='block';
+    	}
+    }
+    window.onload = checkph;
+		
+	$(document).ready(function(){
+		var name=localStorage.getItem("nameuser");
+		$("#username").html(name);
+	});
+	</script>
+

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Dashboard">
+    <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+
+    <title>HUIT</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="assets/js/register.js" type="text/javascript"></script>
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <!--external css-->
+    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+        
+    <!-- Custom styles for this template -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/style-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+    .aboutus{
+
+    padding: 9px;
+    text-align: center;
+    font-size: 16px;
+    }
+#loader{
+   position: absolute;
+  left: 45%;
+  top: 36%;
+  z-index: 1;
+  width: 160px;
+  height: 180px;
+  background-image: url("img/loader7.gif");
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 10px;
+  z-index: 1000;
+  display:none;
+}
+
+#fade{
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    width: 100%;
+    z-index: 999;
+    opacity: 0.9;
+    margin-top: -12%;
+    display:none;
+}
+    </style>
+  </head>
+<body>
+<div id="fade"></div>
+<div id="loader"></div>
+
+      <!-- **********************************************************************************************************************************************************
+      MAIN CONTENT
+      *********************************************************************************************************************************************************** -->
+       <div class="panel"  style="width: 48%;margin-top: 11%;margin-left: 25%;border-radius: 3px;">
+        <div class="panel-heading" style="background-color: #68dff0;" >
+          <h3 class="form-login-heading" style="text-align:center; color:white"><b><i class="fa fa-keyboard-o" aria-hidden="true"></i>&nbsp;Enter the credentials to register</b></h3>
+      </div>
+        <div class="panel-body">
+            <input type="text" class="form-control" placeholder="Full Name" id="name" autofocus>
+            <br>
+            <input  type="text" class="form-control" placeholder="Email" id="email" autofocus>
+            <br>
+            <input type="text" class="form-control" placeholder="Contact No." id="contact-no"><br>
+            <button id="registerBtn" class="btn btn-theme btn-block" type="submit"><i class="fa fa-lock"></i>Create Account</button>
+        </div>
+      </div> 
+      <!--modal-->
+      <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal" class="modal fade">
+                  <div class="modal-dialog">
+                      <div class="modal-content">
+                          <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                              <h4 class="modal-title">Welcome to HUIT community</h4>
+                          </div>
+                          <div class="modal-body">
+                              <span id="registerSuccessfull">Your password has been sent to your registered email ID.
+                                Please click OK to continue</span>
+    						
+                          </div>
+                          <div class="modal-footer">
+                              <a href="login.html"><button class="btn btn-theme" type="button" >OK</button></a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <!-- modal -->
+     
+
+        <a href="homepage.html"><div class="gohome">Go to Homepage</div></a>
+       
+
+    <!-- js placed at the end of the document so the pages load faster -->
+  
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+
+    <!--BACKSTRETCH-->
+    <!-- You can use an image of whatever size. This script will stretch to fit in any screen size.-->
+    <script type="text/javascript" src="assets/js/jquery.backstretch.min.js"></script>
+    <script>
+        $.backstretch("assets/img/3.png", {speed: 500});
+    </script>
+
+
+  </body>
+   <script>
+    function openModal() 
+    {
+        document.getElementById('loader').style.display = 'block';
+        document.getElementById('fade').style.display = 'block';
+    }
+
+    function closeModal() 
+    {
+    document.getElementById('loader').style.display = 'none';
+    document.getElementById('fade').style.display = 'none';
+    }
+    </script>
+</html>
+

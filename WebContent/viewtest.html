@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="assets1/img/favicon.ico">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <title>HUIT</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="assets1/js/viewtest.js" type="text/javascript"></script>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+
+
+    <!-- Bootstrap core CSS     -->
+    <link href="assets1/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Animation library for notifications   -->
+    <link href="assets1/css/animate.min.css" rel="stylesheet"/>
+
+    <!--  Light Bootstrap Table core CSS    -->
+    <link href="assets1/css/light-bootstrap-dashboard.css" rel="stylesheet"/>
+
+
+    <!--  CSS for Demo Purpose, don't include it in your project     -->
+    <link href="assets1/css/demo.css" rel="stylesheet" />
+    
+
+
+    <!--     Fonts and icons     -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+    <link href="assets1/css/pe-icon-7-stroke.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="assets/css/modal1.css">
+</head>
+<body>
+<!-- The Modal -->
+<div id="myModalReconfigure" class="modal1">
+
+  <!-- Modal content -->
+  <div class="modal1-content">
+    <div class="modal1-header">
+      <span class="close1">&times;</span>
+      <h2 style="color: white;font-size: 22px;" id="testdetail"></h2>
+    </div>
+    <div class="col-md-12">
+    <div class="modal1-body">
+      <div class="content table-responsive table-full-width">
+          <table class="table table-hover table-striped">
+              <thead>
+              <th></th>
+              <th>No. of Questions</th>
+              <th>Time alloted</th>
+              </thead>
+              <tbody>
+                  <tr>
+                  <th>Verbal</th>
+                  <td><input id="noEng" class="form-control"></td>
+                  <td><input id="timeEng" class="form-control"></td>
+                  </tr>
+                  <tr>
+                  <th>Quants</th>
+                  <td><input id="noQuant" class="form-control"></td>
+                  <td><input id="timeQuant" class="form-control"></td>
+                  </tr>
+                  <tr>
+                  <th>Logical</th>
+                  <td><input id="noLogical" class="form-control"></td>
+                  <td><input id="timeLogical" class="form-control"></td>
+                  </tr>
+                  </tbody>
+              </table>
+              </div>
+              <div class="col-md-6">
+                   <div class="form-group">
+                     <label>Date</label>
+                       <input type="date" class="form-control" id="date">
+                       </div>
+               </div>
+               <div class="col-md-6">
+                <div class="form-group">
+                     <label>Difficulty</label>
+               <select id="difficulty" class="form-control"><option value="1" name=a>Easy</option><option value="2" name=a>Medium</option><option value="3" name=a>Hard</option></select>
+             </div>
+             </div>
+    </div>
+  </div>
+    <div class="modal-footer">
+    	
+      <a onclick="saveTest();" style="float:right"><button class="btn btn-theme btn-success" type="button" >Done</button></a>
+      <a onclick="cancelBtn();" style="float:right"><button class="btn btn-theme btn-warning" type="button" >Cancel</button></a>
+      
+    </div>
+  </div>
+
+</div>
+
+<!-- The Modal -->
+<div id="myModalShorlisted" class="modal1">
+
+  <!-- Modal content -->
+  <div class="modal1-content" style="width: 55%;">
+    <div class="modal1-header">
+      <span class="close1">&times;</span>
+      <h2 style="color: white;font-size: 22px;" id="testdetail">ShortListed Students</h2>
+    </div>
+     <div class="col-md-12" style="padding:10px">
+    <div class="modal1-body">
+      <div class="content table-responsive table-full-width" style="text-align:center">
+          <table class="table table-hover table-striped">
+              <thead>
+                <th>Sl. No.</th>
+                   <th>Name</th>
+                    <th>Verbal Marks (%)</th>
+                    <th>Quants Marks (%)</th>
+                    <th>Logical Marks (%)</th>
+                    <th>Total Marks Obtained (%)</th>
+                    <th></th>
+                    </thead>
+                    <tbody id="studentListTbl">
+                    
+                    </tbody>
+               </table>
+          </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+      <a onclick="closeList();" style="float:right"><button class="btn btn-theme btn-success" type="button" >OK</button></a>
+    </div>
+  </div>
+
+</div>
+<div class="wrapper">
+    <div class="sidebar" data-color="dark-purple" data-image="assets1/img/sidebar-2.jpg">
+
+    <!--
+
+        Tip 1: you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple"
+        Tip 2: you can also add an image using data-image tag
+
+    -->
+
+        <div class="sidebar-wrapper">
+            <div class="logo">
+                
+                   <div ><img style="margin-left: 80px" src="	img/user.png"></div>
+            
+                <b ><h4 style="text-align: center;margin-top: 2px;margin-bottom: 2px;">Hello!</h4>  </b>
+                <a  ><h5 id="username"style="margin-top: 0px; text-align: center;margin-bottom: 2px;">Admin</h5></a>
+                
+                
+            </div>
+
+            <ul class="nav">
+                <li>
+                    <a href="dashboard.html">
+                        <i class="fa fa-calendar"></i>
+                        <p>Events Calendar</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="createtest.html">
+                        <i class="fa fa-file-text-o"></i>
+                        <p>Create Test</p>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="viewtest.html">
+                        <i class="pe-7s-note2"></i>
+                        <p>View previous test</p>
+                    </a>
+                </li>
+                 <li >
+                    <a href="dumpques.html">
+                        <i class="fa fa-keyboard-o" aria-hidden="true"></i>
+                        <p>Feed Questions</p>
+                    </a>
+                </li>
+                <hr>
+                <li>
+                    <a href="aboutusadmin.html">
+                        <i class="fa fa-info"></i>
+                        <p>About US</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="contactusadmin.html">
+                        <i class="fa fa-mobile"></i>
+                        <p>Contact US</p>
+                    </a>
+                </li>
+             
+                
+                
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-panel">
+        <nav class="navbar navbar-default navbar-fixed" style="background-color:#33134F">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" style="color:#fff">Create Test</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    
+
+                    <ul class="nav navbar-nav navbar-right">
+                        
+                        <li>
+                            <button id="logoutbtn" onClick="signOutAdmin(); return false;" class="btn btn-theme btn-block btn-fill" type="submit">
+<i class="fa fa-lock"></i> Logout
+</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+<!--***********************************MAIN CONTENT*****************************************8-->
+<div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title">Upcoming Test</h4>
+                                <p class="category">Tests that has to be conducted </p>
+                            </div>
+                            <div class="content table-responsive table-full-width">
+                                <table class="table table-hover table-striped">
+                                    <thead>
+                                        <th>Test ID</th>
+                                        <th>College</th>
+                                        <th>Passkey</th>
+                                        <th>Batch</th>
+                                        <th>Date</th>
+                                        <th>Reconfigure</th>
+                                    </thead>
+                                    <tbody id="upcomingTestTbl">
+                                     
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title">Evaluate Test</h4>
+                                <p class="category">Tests which need to be evaluated</p>
+                            </div>
+                            <div class="content table-responsive table-full-width">
+                                <table class="table table-hover table-striped">
+                                    <thead>
+                                        <th>Test ID</th>
+                                        <th>College</th>
+                                        <th>Passkey</th>
+                                        <th>Batch</th>
+                                        <th>Date</th>
+                                        <th>Evaluate</th>
+                                    </thead>
+                                    <tbody id="evaluateTestTbl">
+                                       
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    </div>
+                   
+
+
+
+<!--***********************************MAIN CONTENT END*****************************************8-->
+
+
+ <!--   Core JS Files   -->
+    <script src="assets1/js/jquery-1.10.2.js" type="text/javascript"></script>
+    <script src="assets1/js/bootstrap.min.js" type="text/javascript"></script>
+
+    <!--  Checkbox, Radio & Switch Plugins -->
+    <script src="assets1/js/bootstrap-checkbox-radio-switch.js"></script>
+
+    <!--  Charts Plugin -->
+    <script src="assets1/js/chartist.min.js"></script>
+
+    <!--  Notifications Plugin    -->
+    <script src="assets1/js/bootstrap-notify.js"></script>
+
+    <!--  Google Maps Plugin    -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+
+    <!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
+    <script src="assets1/js/light-bootstrap-dashboard.js"></script>
+
+    <!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
+    <script src="assets1/js/demo.js"></script>
+
+        <script>
+        $(document).ready(function(){
+            $( ".reconfigure" ).click(function() {
+                window.load("createtest.html")
+                    });
+             
+        });
+        </script>
